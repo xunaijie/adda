@@ -1,0 +1,20 @@
+
+State Machine - |ADDA|OledDriver_WFA:inst9|data_state_back
+Name data_state_back.DISPLAY 
+data_state_back.CLEAR 0 
+data_state_back.DISPLAY 1 
+
+State Machine - |ADDA|OledDriver_WFA:inst9|data_state
+Name data_state.DELAY data_state.DISPLAY data_state.SHIFT data_state.IDLE data_state.CLEAR 
+data_state.IDLE 0 0 0 0 0 
+data_state.SHIFT 0 0 1 1 0 
+data_state.CLEAR 0 0 0 1 1 
+data_state.DISPLAY 0 1 0 1 0 
+data_state.DELAY 1 0 0 1 0 
+
+State Machine - |ADDA|OledDriver_WFA:inst9|clk_div_state
+Name clk_div_state.CLK_FALLING_DEGE clk_div_state.CLK_RISING_DEGE clk_div_state.CLK_H clk_div_state.CLK_L 
+clk_div_state.CLK_L 0 0 0 0 
+clk_div_state.CLK_H 0 0 1 1 
+clk_div_state.CLK_RISING_DEGE 0 1 0 1 
+clk_div_state.CLK_FALLING_DEGE 1 0 0 1 

@@ -1,0 +1,14 @@
+
+module convert(clk,vpp_re,bin_send);
+	 input clk;
+	 input [7:0] vpp_re;
+ 			 
+	 output [15:0] bin_send;
+	 reg [15:0] bin_send;
+always @(posedge clk)
+begin
+	bin_send <= {8'b0 ,vpp_re};
+end
+	 
+	 
+endmodule
